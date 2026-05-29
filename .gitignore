@@ -3,16 +3,26 @@ __pycache__/
 *.py[cod]
 env/
 venv/
+*.pyc
 
 # Node
 node_modules/
 dist/
+.next
 
 # Environment files
-/.env
-/backend/.env
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env.local
 
 # Editor
 .vscode/
 .idea/
 *.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import ResultCard from './ResultCard';
 
 const ResultPanel = ({ onAnalyzeClick }) => {
@@ -18,8 +18,11 @@ const ResultPanel = ({ onAnalyzeClick }) => {
     const formData = new FormData();
     formData.append('file', file);
 
+    // Use environment variable for API URL, fall back to localhost for local dev
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+
     try {
-      const response = await fetch('http://localhost:8000/analyze', {
+      const response = await fetch(`${apiUrl}/analyze`, {
         method: 'POST',
         body: formData,
       });
