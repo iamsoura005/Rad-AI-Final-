@@ -50,7 +50,7 @@ const ResultPanel = ({ onAnalyzeClick }) => {
           lines.forEach(line => {
             if (line.startsWith('data: ')) {
               const data = line.substring(6); // Remove "data: "
-              if data.trim() !== '' {
+              if (data.trim() !== '') {
                 setAnalysisText(prev => prev + data);
               }
             }
