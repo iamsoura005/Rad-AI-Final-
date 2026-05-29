@@ -142,7 +142,7 @@ const ResultPanel = ({ onAnalyzeClick }) => {
               <div className="bg-red-900 border border-red-800 text-red-400 px-4 py-2 rounded mt-4">
                 ⚠️ This is an AI-assisted analysis and not a medical diagnosis.
               </div>
-            </>
+            </div>
           )}
           
           {/* If we have analyzed but no sections parsed (maybe the format is different) */}
