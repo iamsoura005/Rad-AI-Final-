@@ -4,18 +4,6 @@
   "outputDirectory": "frontend/dist",
   "framework": "vite",
   "env": {
-    "VITE_API_URL": {
-      "description": "Backend API URL for frontend to call (e.g., https://your-backend.onrender.com or http://localhost:8000 for local dev)"
-    },
-    "GROQ_API_KEY": {
-      "description": "Your Groq API key - add this in Vercel Environment Variables"
-    }
-  },
-  "regions": ["iad1"],
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "${VITE_API_URL}/:path*"
-    }
-  ]
+    "VITE_API_URL": "http://localhost:8000"
+  }
 }
